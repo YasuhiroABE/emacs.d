@@ -13,11 +13,19 @@
 
 ;;;;;;;;;;;;;;;;;;;
 ;; font settings ;;
+
+;; https://melpa.org/#/getting-started
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
 ; (set-default-font "Ricty Diminished Discord 11")
 ; (set-default-font "Noto Sans CJK JP 12") ;; almost good, but whitespace is unreadable.
 ; (set-default-font "Noto Sans Mono 11") ;; mono cannot chose with 'light' word.
-(set-default-font "Noto Sans Mono CJK JP 12") ;; mono cannot chose with 'light' word.
+; (set-default-font "Noto Sans Mono CJK JP 12") ;; mono cannot chose with 'light' word.
 ; (set-default-font " VL PGothic 12") ;; mono cannot chose with 'light' word.
+(add-to-list 'default-frame-alist '(font . "Noto Sans Mono CJK JP 12" ))
+(set-face-attribute 'default t :font "Noto Sans Mono CJK JP 12" )
 
 ;; keyboard mappings
 (global-set-key "\C-h" 'delete-backward-char)

@@ -47,9 +47,8 @@
 (add-hook 'adoc-mode-hook (lambda()
 			    (require 'time-stamp)
 			    (add-hook 'before-save-hook 'time-stamp)
-			    (setq time-stamp-active t)
-			    (setq time-stamp-start "date: ")
-			    (setq time-stamp-format "%04y-%02m-%02dT%02H:%02M:%02S+09:00")
-			    (setq time-stamp-end "$")
-			    ))
-
+			    (custom-set-variables
+			     '(time-stamp-active t)
+			     '(time-stamp-start "date: ") 
+			     '(time-stamp-format "%Y-%02m-%02dT%02H:%02M:%02S%:z")
+			     '(time-stamp-end "$"))))

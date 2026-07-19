@@ -107,6 +107,7 @@
    )
   )
 
+;; emacs is aliased to `env XMODIFIERS=@im=none GDK_IM_MODULE=xim emacs'
 (leaf ddskk
   :ensure t)
 
